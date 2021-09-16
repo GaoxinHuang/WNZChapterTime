@@ -1,7 +1,7 @@
 import * as React from 'react';
 import 'antd/dist/antd.css';
 import { Form, Input, Button } from 'antd';
-import { User } from '../types/user';
+import { User } from '../types/user'; 
 
 const RegisterComponent: React.FC = () => {
     const onFinish = (user: User) => {
