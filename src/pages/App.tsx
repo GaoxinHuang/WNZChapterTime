@@ -23,7 +23,6 @@ function App() {
               <HomeComponent />
             </Route>
           </Switch>
-
         </div>
       </Router>
     </AuthenContextProvider>

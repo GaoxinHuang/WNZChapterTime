@@ -8,7 +8,7 @@ import { useAuthContext } from '../contexts/authen-context';
 import { addAuthen } from '../store/authen-action';
 const LoginComponent: React.FC = () => {
     const [error, setError] = React.useState(false);
-    const { dispatch:dispatch } = useAuthContext();
+    const { dispatch } = useAuthContext();
     const history = useHistory();
     const login = (user: User): void => {
         const success = LoginApi(user);
