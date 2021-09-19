@@ -2,22 +2,19 @@ import { Button, Form } from 'antd';
 import * as React from 'react';
 import { User } from '../../types/user';
 import FormInput from '../shared/FormInput';
+import 'antd/dist/antd.css';
 
-const AccountForm : React.FC = ()=>{
-    const onFinish = (user: User) => {
-        console.log('Success:', user);
-    };
+interface AccountFormProps {
+    onFinish: (user: User) => void
+}
 
-    const onFinishFailed = (errorInfo: any) => {
-        console.log('Failed:', errorInfo);
-    };
+const AccountForm: React.FC<AccountFormProps> = (props) => {
     return (
         <Form
             name="basic"
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 8 }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
+            onFinish={props.onFinish}
         >
             <FormInput
                 label="Username"
@@ -58,6 +55,6 @@ const AccountForm : React.FC = ()=>{
             </Form.Item>
         </Form>
     );
-}   
+}
 
 export default AccountForm;
