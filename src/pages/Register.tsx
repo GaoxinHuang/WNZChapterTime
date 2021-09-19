@@ -14,11 +14,6 @@ const RegisterComponent: React.FC = () => {
     return <React.Fragment>
         <h1>Register</h1>
         <AccountForm onFinish={register} />
-
-        {/* 用router 的link 
-        <Anchor affix={false} onClick={()=> {alert("d")}}>
-            <Anchor.Link href='' title="If already have an account, sign in" />
-        </Anchor> */}
         <Link to='/login'>If already have an account, sign in in there</Link>
     </React.Fragment>
 }
